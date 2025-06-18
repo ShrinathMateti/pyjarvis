@@ -1,26 +1,26 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
+import python from "/src/assets/pythonmastery.jpg";
+import web from "/src/assets/webmastery.jpg";
+import reactCourse from "/src/assets/reactmastery.png";
 
 const courses = [
   {
     title: "Python Mastery",
     description:
       "Learn Python from basics to advanced, including data analysis and automation.",
-    image:
-      "/src/assets/pythonmastery.jpg",
+    image: { python },
   },
   {
     title: "Web Development Mastery with Django",
     description:
       "Build robust web applications with Python and Django framework.",
-    image:
-      "/src/assets/webmastery.jpg",
+    image: { web },
   },
   {
     title: "React Mastery (Coming Soon)",
     description:
       "Master front-end development with React, hooks, and advanced components.",
-    image: "/src/assets/reactmastery.png",
+    image: { reactCourse },
   },
 ];
 

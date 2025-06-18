@@ -1,10 +1,10 @@
-import React from "react";
+import banner from '../assets/pythondeskbanner.jpg';
 
 export default function Banner() {
   return (
     <div>
       <img
-        src="/src/assets/pythondeskbanner.jpg"
+        src={banner}
         alt="dbanner"
         className="hidden sm:block"
       />

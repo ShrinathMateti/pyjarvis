@@ -8,19 +8,19 @@ const courses = [
     title: "Python Mastery",
     description:
       "Learn Python from basics to advanced, including data analysis and automation.",
-    image: { python },
+    image: python,
   },
   {
     title: "Web Development Mastery with Django",
     description:
       "Build robust web applications with Python and Django framework.",
-    image: { web },
+    image: web,
   },
   {
     title: "React Mastery (Coming Soon)",
     description:
       "Master front-end development with React, hooks, and advanced components.",
-    image: { reactCourse },
+    image: reactCourse,
   },
 ];
 

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import python from "/src/assets/pythonmastery.jpg";
-import web from "/src/assets/webmastery.jpg";
+import django from "/src/assets/django.jpg";
 import reactCourse from "/src/assets/reactmastery.png";
 
 const courses = [
@@ -14,7 +14,7 @@ const courses = [
     title: "Web Development Mastery with Django",
     description:
       "Build robust web applications with Python and Django framework.",
-    image: web,
+    image: django,
   },
   {
     title: "React Mastery (Coming Soon)",

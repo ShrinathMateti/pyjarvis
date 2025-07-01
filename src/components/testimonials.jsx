@@ -7,21 +7,21 @@ export default function Testimonials() {
       name: "John Doe",
       feedback:
         "PyJarvis IT has transformed my career. The courses are in-depth, and the instructors are incredibly knowledgeable.",
-      image: "https://via.placeholder.com/100", // Replace with actual image URL
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG3cyE-AVTlfLvFuhsfhWlq3TaYQNeS-I7Yg&s", // Replace with actual image URL
     },
     {
       id: 2,
       name: "Jane Smith",
       feedback:
         "I loved the hands-on projects! They gave me the confidence to apply what I learned in real-world scenarios.",
-      image: "https://via.placeholder.com/100", // Replace with actual image URL
+      image: "https://m.media-amazon.com/images/M/MV5BNWJjYzFiZGEtZTI5Yi00ZDExLTk0MmEtZjM2ZjA0NzdhZGQ3XkEyXkFqcGc@._V1_.jpg", // Replace with actual image URL
     },
     {
       id: 3,
       name: "Sam Wilson",
       feedback:
         "The community and support at PyJarvis IT are amazing. Highly recommend their programs to anyone.",
-      image: "https://via.placeholder.com/100", // Replace with actual image URL
+      image: "https://s2.r29static.com/bin/entry/307/x,80/2174240/image.jpg", // Replace with actual image URL
     },
   ];
 

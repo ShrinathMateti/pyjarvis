@@ -1,6 +1,6 @@
 import student1 from "/src/assets/Agarwal.jpeg";
 import student2 from "/src/assets/Sherla.jpeg";
-import student3 from "/src/assets/Manisha.png";
+import student3 from "/src/assets/Manisha.jpg";
 
 export default function Testimonials() {
   const testimonials = [

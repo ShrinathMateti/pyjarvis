@@ -1,27 +1,29 @@
-import React from "react";
+import student1 from "/src/assets/Agarwal.jpeg";
+import student2 from "/src/assets/Sherla.jpeg";
+import student3 from "/src/assets/Manisha.png";
 
 export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Mohit Agarwal",
       feedback:
-        "PyJarvis IT has transformed my career. The courses are in-depth, and the instructors are incredibly knowledgeable.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG3cyE-AVTlfLvFuhsfhWlq3TaYQNeS-I7Yg&s", // Replace with actual image URL
+        "PyJarvis is a fantastic institute for learning python. The course content is explained in a very simple and easy-to-understand way, making it perfect for beginners. It helps build strong python basics step by step with clear guidance",
+      image: student1,
     },
     {
       id: 2,
-      name: "Jane Smith",
+      name: "Bhargavi Sherla",
       feedback:
-        "I loved the hands-on projects! They gave me the confidence to apply what I learned in real-world scenarios.",
-      image: "https://m.media-amazon.com/images/M/MV5BNWJjYzFiZGEtZTI5Yi00ZDExLTk0MmEtZjM2ZjA0NzdhZGQ3XkEyXkFqcGc@._V1_.jpg", // Replace with actual image URL
+        "I began this course with zero knowledge of python, but thanks to sir’s excellent teaching. From basics to advanced topics, his guidance made learning enjoyable and effective.Pyjarvis Institute is best for beginners",
+      image: student2,
     },
     {
       id: 3,
-      name: "Sam Wilson",
+      name: "Manisha Varma",
       feedback:
-        "The community and support at PyJarvis IT are amazing. Highly recommend their programs to anyone.",
-      image: "https://s2.r29static.com/bin/entry/307/x,80/2174240/image.jpg", // Replace with actual image URL
+      "I had an excellent experience learning Python at PyJarvis Institute, where instructor explained concepts clearly with examples. Their hands-on teaching boosted my confidence and built a solid programming foundation",
+      image:student3,
     },
   ];
 
@@ -29,7 +31,7 @@ export default function Testimonials() {
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
         {/* Section Title */}
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">
           What Our Students Say
         </h2>
 
@@ -38,7 +40,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center text-center"
             >
               {/* Testimonial Image */}
               <img
@@ -48,13 +50,14 @@ export default function Testimonials() {
               />
 
               {/* Name */}
-              <h3 className="text-xl font-semibold text-gray-700">
+              <h3 className="text-xl font-semibold text-gray-800">
                 {testimonial.name}
               </h3>
-              <p className="text-sm text-blue-500 mb-4">{testimonial.role}</p>
 
               {/* Feedback */}
-              <p className="text-gray-600 italic">"{testimonial.feedback}"</p>
+              <p className="text-gray-600 italic mt-3">
+                "{testimonial.feedback}"
+              </p>
             </div>
           ))}
         </div>

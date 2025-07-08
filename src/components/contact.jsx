@@ -1,15 +1,47 @@
 import { useNavigate } from "react-router-dom";
+import { db } from "../firebase"; 
+import { collection, addDoc } from "firebase/firestore";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Contact = () => {
   const navigate = useNavigate(); // Initialize the navigate function
 
-  // Function to handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    alert("Your message has been submitted!"); // Show a confirmation message (optional)
-    navigate("/"); // Redirect to the home page
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
+  const name = e.target.name.value.trim();
+  const number = e.target.number.value.trim();
+  const message = e.target.message.value.trim();
+
+  if (!name || !number || !message) {
+    toast.error("Please fill in all fields.");
+    return;
+  }
+
+  try {
+    await addDoc(collection(db, "contacts"), {
+      name,
+      number,
+      message,
+      createdAt: new Date(),
+    });
+
+    toast.success("Message submitted! Redirecting...");
+
+    //Navigate after 2 seconds so user sees the toast
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
+  } catch (error) {
+    console.error("Error submitting:", error);
+    toast.error("Failed to submit. Try again.");
+  }
+};
+
+
+ 
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -70,7 +102,7 @@ const Contact = () => {
                     d="M3 5a2 2 0 012-2h14a2 2 0 012 2v16l-7-3.5L3 21V5z"
                   />
                 </svg>
-                <span>info@pyjarvisit.com</span>
+                <span>info@pyjarvis.vercel.app</span>
               </div>
               <div className="flex items-center space-x-4">
                 <svg
@@ -94,6 +126,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-gray-50 p-8 rounded-lg shadow">
+            <ToastContainer position="top-right" autoClose={3000} />
             <h2 className="text-2xl font-bold text-gray-900">
               Send Us a Message
             </h2>

@@ -60,7 +60,7 @@ const Footer = () => {
               <i className="bi bi-telephone mr-2"></i> 9834714191
             </p>
             <p className="text-gray-400">
-              <i className="bi bi-envelope mr-2"></i> info@pyjarvisit.com
+              <i className="bi bi-envelope mr-2"></i> info@pyjarvis.vercel.app
             </p>
           </div>
         </div>
